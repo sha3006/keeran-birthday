@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#000;
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+}
+
+h1{
+font-size:5rem;
+color:gold;
+text-align:center;
+text-shadow:
+0 0 10px gold,
+0 0 20px gold,
+0 0 40px gold;
+animation:pulse 2s infinite;
+}
+
+p{
+margin-top:20px;
+font-size:26px;
+max-width:900px;
+text-align:center;
+line-height:1.8;
+padding:20px;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.05);
+}
+}
+
+.cake{
+font-size:120px;
+margin-top:20px;
+animation:float 3s infinite;
+}
+
+@keyframes float{
+50%{
+transform:translateY(-20px);
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+
+<div class="cake">🎂</div>
+
+<p>
+
+May every dream you have come true.
+
+May your smile never fade.
+
+May happiness, success, good health and endless blessings always stay with you.
+
+Thank you for being such a wonderful person.
+
+You deserve every beautiful thing life has to offer.
+
+❤️ Happy Birthday ❤️
+
+</p>
+
+<script>
+
+setInterval(()=>{
+
+confetti({
+particleCount:300,
+spread:180,
+origin:{y:0.6}
+});
+
+},2500);
+
+</script>
+
+</body>
+</html>
