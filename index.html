@@ -5,126 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Keeran ❤️</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+<link rel="stylesheet" href="css/style.css">
 
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    overflow:hidden;
-    background:linear-gradient(-45deg,#ff4d6d,#ff85a2,#ffb3c6,#ffc2d1);
-    background-size:400% 400%;
-    animation:bg 10s ease infinite;
-}
-
-@keyframes bg{
-    0%{background-position:0% 50%;}
-    50%{background-position:100% 50%;}
-    100%{background-position:0% 50%;}
-}
-
-.card{
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
-    padding:50px;
-    border-radius:25px;
-    text-align:center;
-    color:white;
-    box-shadow:0 8px 30px rgba(0,0,0,0.3);
-    z-index:10;
-}
-
-h1{
-    font-size:3rem;
-    margin-bottom:15px;
-    text-shadow:0 0 15px white;
-}
-
-h2{
-    margin-bottom:30px;
-    font-weight:300;
-}
-
-.btn{
-    padding:15px 35px;
-    border:none;
-    border-radius:50px;
-    background:white;
-    color:#ff4d6d;
-    font-size:20px;
-    cursor:pointer;
-    transition:0.4s;
-    font-weight:bold;
-}
-
-.btn:hover{
-    transform:scale(1.1);
-    box-shadow:0 0 20px white;
-}
-
-.balloon{
-    position:absolute;
-    bottom:-150px;
-    font-size:50px;
-    animation:float 8s linear infinite;
-}
-
-.balloon:nth-child(1){
-    left:10%;
-    animation-delay:0s;
-}
-.balloon:nth-child(2){
-    left:30%;
-    animation-delay:2s;
-}
-.balloon:nth-child(3){
-    left:50%;
-    animation-delay:4s;
-}
-.balloon:nth-child(4){
-    left:70%;
-    animation-delay:1s;
-}
-.balloon:nth-child(5){
-    left:90%;
-    animation-delay:3s;
-}
-
-@keyframes float{
-    from{
-        transform:translateY(0);
-    }
-    to{
-        transform:translateY(-120vh);
-    }
-}
-</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
 
-<div class="balloon">🎈</div>
-<div class="balloon">🎈</div>
-<div class="balloon">🎈</div>
-<div class="balloon">🎈</div>
-<div class="balloon">🎈</div>
+<div class="hero">
 
-<div class="card">
-    <h1>🎉 Happy Birthday Keeran 🎉</h1>
-    <h2>My Dear Best Friend ❤️</h2>
+<h1 class="title">
+🎉 Happy Birthday
+<span>Keeran ❤️</span>
+</h1>
 
-    <button class="btn"
-        onclick="location.href='surprise1.html'">
-        Open Your Surprise 🎁
-    </button>
+<p class="subtitle">
+A Special Surprise Awaits You ✨
+</p>
+
+<button id="openGift">
+🎁 Open Your Surprise
+</button>
+
 </div>
+
+<audio autoplay loop>
+<source src="music/birthday.mp3" type="audio/mp3">
+</audio>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
