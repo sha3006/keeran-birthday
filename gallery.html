@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Memories ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#000;
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+.slider{
+width:90%;
+height:80vh;
+position:relative;
+overflow:hidden;
+border-radius:25px;
+box-shadow:0 0 40px gold;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+opacity:0;
+transition:1s;
+}
+
+.slide.active{
+opacity:1;
+}
+
+.slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+animation:zoom 8s linear infinite;
+}
+
+@keyframes zoom{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.15);
+}
+}
+
+button{
+margin-top:20px;
+padding:15px 40px;
+background:gold;
+border:none;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="slider">
+
+<div class="slide active">
+<img src="images/photo1.jpg">
+</div>
+
+<div class="slide">
+<img src="images/photo2.jpg">
+</div>
+
+<div class="slide">
+<img src="images/photo3.jpg">
+</div>
+
+<div class="slide">
+<img src="images/photo4.jpg">
+</div>
+
+<div class="slide">
+<img src="images/photo5.jpg">
+</div>
+
+</div>
+
+<button onclick="window.location='finale.html'">
+Final Surprise 🎆
+</button>
+
+<script>
+
+const slides=document.querySelectorAll('.slide');
+
+let index=0;
+
+setInterval(()=>{
+
+slides[index].classList.remove('active');
+
+index++;
+
+if(index>=slides.length){
+index=0;
+}
+
+slides[index].classList.add('active');
+
+},4000);
+
+</script>
+
+</body>
+</html>
